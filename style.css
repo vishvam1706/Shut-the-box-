@@ -132,6 +132,12 @@
         font-size: 16px;
         margin-bottom: 20px;
     }
+    .fdice{
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        margin-bottom: 20px;
+    }
 }
 @media (min-width:0px) and (max-width:279px) {
     .box{
@@ -145,12 +151,10 @@
         top: 70%;
         margin-left: -50px;
         line-height: 50px;
+        font-size: 13px;
     }
     .three{
-        margin-top: 30px;
-    }
-    .diceMpart{
-        margin-bottom: 30px;
+        margin-top: 35px;
     }
     .heading{
         font-size: 30px;
@@ -161,5 +165,11 @@
     }
     .dice{
         margin-top: 30px;
+    }
+    .fdice{
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        margin-bottom: -20px;
     }
 }
