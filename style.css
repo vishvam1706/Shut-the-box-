@@ -106,8 +106,8 @@
 }
 @media (min-width:280px) and (max-width:700px) {
     .box{
-        height: 70px;
-        width: 70px;
+        height: 60px;
+        width: 60px;
     }
     .hideContent{
         height: 80px;
@@ -116,8 +116,21 @@
         margin-left: -100px;
         line-height: 80px;
     }
+    .diceMpart{
+        margin-bottom: 10px;
+    }
+    .three{
+        margin-top: 30px;
+    }
+    .dice{
+        margin-top: 30px;
+    }
     .heading{
         font-size: 40px;
+    }
+    .btn{
+        font-size: 16px;
+        margin-bottom: 20px;
     }
 }
 @media (min-width:0px) and (max-width:279px) {
@@ -134,10 +147,19 @@
         line-height: 50px;
     }
     .three{
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-top: 30px;
+    }
+    .diceMpart{
+        margin-bottom: 30px;
     }
     .heading{
         font-size: 30px;
+    }
+    .btn{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .dice{
+        margin-top: 30px;
     }
 }
