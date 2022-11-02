@@ -1,3 +1,5 @@
+// Created By TV and V3dant :)
+
 let box1 = document.getElementById('box1');
 let box2 = document.getElementById('box2');
 let box3 = document.getElementById('box3');
@@ -46,6 +48,8 @@ function winLose()
             hideContent.style.display = 'none';
         }, 2000);
         rollDice.innerText = 'Play Again?';
+        num1 = parseInt(Math.random()*(7-1)+1);
+        num2 = parseInt(Math.random()*(7-1)+1);
     }
 }
 
@@ -211,10 +215,20 @@ rollDice.addEventListener('click',()=>{
         {
             num1 = arr[0];
             num2 = arr[1];
-            d1.innerText=num1;
-            d2.innerText=num2;
-            diceTotal = num1+num2;
-            rollDice.style.backgroundColor = '#c2fbd7';
+            if (num1<=6 && num2<=6) {
+                d1.innerText=num1;
+                d2.innerText=num2;
+                diceTotal = num1+num2;
+                rollDice.style.backgroundColor = '#c2fbd7';
+            }
+            else{
+                num1 = parseInt(Math.random()*(7-1)+1);
+                num2 = parseInt(Math.random()*(7-1)+1);
+                d1.innerText=num1;
+                d2.innerText=num2;
+                rollDice.style.backgroundColor = '#c2fbd7';
+                diceTotal = num1+num2;
+            }
         }
         else if (total == 0) {
             rollDice.innerText = 'click to roll the dice';
