@@ -14,7 +14,6 @@ let d2 = document.getElementById('d2');
 let rollDice = document.getElementById('rollDice');
 let hideContent = document.getElementById('hideContent');
 
-
 function changeDiceValue() {
     if(diceTotal==0)
     {
@@ -31,6 +30,37 @@ let num1 = parseInt(Math.random()*(7-1)+1);
 let num2 = parseInt(Math.random()*(7-1)+1);
 let total = 45;
 let arr = [1,2,3,4,5,6,7,8,9];
+
+function rollAnimation() {
+    setTimeout(() => {
+        d1.innerText=1;
+        d2.innerText=6;
+    }, 0);
+    setTimeout(() => {
+        d1.innerText=2;
+        d2.innerText=5;
+    }, 100);
+    setTimeout(() => {
+        d1.innerText=3;
+        d2.innerText=4;
+    }, 200);
+    setTimeout(() => {
+        d1.innerText=4;
+        d2.innerText=3;
+    }, 300);
+    setTimeout(() => {
+        d1.innerText=5;
+        d2.innerText=2;
+    }, 400);
+    setTimeout(() => {
+        d1.innerText=6;
+        d2.innerText=1;
+    }, 500);
+    setTimeout(() =>{
+        d1.innerText=num1;
+        d2.innerText=num2;
+    },600);
+}
 
 let diceTotal = num1+num2;
 
@@ -53,7 +83,145 @@ function winLose()
     }
 }
 
+box1.addEventListener('click',()=>{
+    let value = 1;
+    if (arr.includes(value)===true) {
+        box1.style.backgroundColor = '#ff2718b0';
+        total -= value;
+        arr.splice(arr.indexOf(value),1);
+        diceTotal -= value;
+        changeDiceValue();
+        winLose();
+        console.log(total);
+        console.log(arr);
+        console.log(diceTotal);
+        console.log(value);
+    }
+});
+
+box2.addEventListener('click',()=>{
+    let value = 2;
+    if (arr.includes(value)===true) {
+        box2.style.backgroundColor = '#ff2718b0';
+        total -= value;
+        arr.splice(arr.indexOf(value),1);
+        diceTotal -= value;
+        changeDiceValue();
+        winLose();
+        console.log(total);
+        console.log(arr);
+        console.log(diceTotal);
+    }
+});
+
+
+box3.addEventListener('click',()=>{
+    let value = 3;
+    if (arr.includes(value)===true) {
+        box3.style.backgroundColor = '#ff2718b0';
+        total -= value;
+        arr.splice(arr.indexOf(value),1);
+        diceTotal -= value;
+        changeDiceValue();
+        winLose();
+        console.log(total);
+        console.log(arr);
+        console.log(diceTotal);
+    }
+});
+
+box4.addEventListener('click',()=>{
+    let value = 4;
+    if (arr.includes(value)===true) {
+        box4.style.backgroundColor = '#ff2718b0';
+        total -= value;
+        arr.splice(arr.indexOf(value),1);
+        diceTotal -= value;
+        changeDiceValue();
+        winLose();
+        console.log(total);
+        console.log(arr);
+        console.log(diceTotal);
+    }
+});
+
+box5.addEventListener('click',()=>{
+    let value = 5;
+    if (arr.includes(value)===true) {
+        box5.style.backgroundColor = '#ff2718b0';
+        total -= value;
+        arr.splice(arr.indexOf(value),1);
+        diceTotal -= value;
+        changeDiceValue();
+        winLose();
+        console.log(total);
+        console.log(arr);
+        console.log(diceTotal);
+    }
+});
+
+box6.addEventListener('click',()=>{
+    let value = 6;
+    if (arr.includes(value)===true) {
+        box6.style.backgroundColor = '#ff2718b0';
+        total -= value;
+        arr.splice(arr.indexOf(value),1);
+        diceTotal -= value;
+        changeDiceValue();
+        winLose();
+        console.log(total);
+        console.log(arr);
+        console.log(diceTotal);
+    }
+});
+
+box7.addEventListener('click',()=>{
+    let value = 7;
+    if (arr.includes(value)===true) {   
+        box7.style.backgroundColor = '#ff2718b0';
+        total -= value;
+        arr.splice(arr.indexOf(value),1);
+        diceTotal -= value;
+        changeDiceValue();
+        winLose();  
+        console.log(total);
+        console.log(arr);
+        console.log(diceTotal);
+    }
+});
+
+box8.addEventListener('click',()=>{
+    let value = 8;
+    if (arr.includes(value)===true) {   
+        box8.style.backgroundColor = '#ff2718b0';
+        total -= value;
+        arr.splice(arr.indexOf(value),1);
+        diceTotal -= value;
+        changeDiceValue();
+        winLose();
+        console.log(arr);   
+        console.log(total);
+        console.log(diceTotal);
+    }
+});
+
+box9.addEventListener('click',()=>{
+    let value = 9;
+    if (arr.includes(value)===true) {   
+        box9.style.backgroundColor = '#ff2718b0';
+        total -= value;
+        arr.splice(arr.indexOf(value),1);
+        diceTotal -= value;
+        changeDiceValue();
+        winLose();
+        console.log(total);
+        console.log(arr); 
+        console.log(diceTotal);
+    }
+});
+
 function newGame() {
+
     total = 45;
     arr = [1,2,3,4,5,6,7,8,9];
 
@@ -71,144 +239,11 @@ function newGame() {
     box7.style.backgroundColor = '#4eff18b0';
     box8.style.backgroundColor = '#4eff18b0';
     box9.style.backgroundColor = '#4eff18b0';
-
-    box1.addEventListener('click',()=>{
-        let value = 1;
-        if (arr.includes(value)===true) {
-            box1.style.backgroundColor = '#ff2718b0';
-            total -= value;
-            arr.splice(arr.indexOf(value),1);
-            diceTotal -= value;
-            changeDiceValue();
-            winLose();
-            console.log(total);
-            console.log(arr);
-            console.log(diceTotal);
-            console.log(value);
-        }
-    });
-
-    box2.addEventListener('click',()=>{
-        let value = 2;
-        if (arr.includes(value)===true) {
-            box2.style.backgroundColor = '#ff2718b0';
-            total -= value;
-            arr.splice(arr.indexOf(value),1);
-            diceTotal -= value;
-            changeDiceValue();
-            winLose();
-            console.log(total);
-            console.log(arr);
-            console.log(diceTotal);
-        }
-    });
-
-    box3.addEventListener('click',()=>{
-        let value = 3;
-        if (arr.includes(value)===true) {
-            box3.style.backgroundColor = '#ff2718b0';
-            total -= value;
-            arr.splice(arr.indexOf(value),1);
-            diceTotal -= value;
-            changeDiceValue();
-            winLose();
-            console.log(total);
-            console.log(arr);
-            console.log(diceTotal);
-        }
-    });
-
-    box4.addEventListener('click',()=>{
-        let value = 4;
-        if (arr.includes(value)===true) {
-            box4.style.backgroundColor = '#ff2718b0';
-            total -= value;
-            arr.splice(arr.indexOf(value),1);
-            diceTotal -= value;
-            changeDiceValue();
-            winLose();
-            console.log(total);
-            console.log(arr);
-            console.log(diceTotal);
-        }
-    });
-
-    box5.addEventListener('click',()=>{
-        let value = 5;
-        if (arr.includes(value)===true) {
-            box5.style.backgroundColor = '#ff2718b0';
-            total -= value;
-            arr.splice(arr.indexOf(value),1);
-            diceTotal -= value;
-            changeDiceValue();
-            winLose();
-            console.log(total);
-            console.log(arr);
-            console.log(diceTotal);
-        }
-    });
-
-    box6.addEventListener('click',()=>{
-        let value = 6;
-        if (arr.includes(value)===true) {
-            box6.style.backgroundColor = '#ff2718b0';
-            total -= value;
-            arr.splice(arr.indexOf(value),1);
-            diceTotal -= value;
-            changeDiceValue();
-            winLose();
-            console.log(total);
-            console.log(arr);
-            console.log(diceTotal);
-        }
-    });
-
-    box7.addEventListener('click',()=>{
-        let value = 7;
-        if (arr.includes(value)===true) {   
-            box7.style.backgroundColor = '#ff2718b0';
-            total -= value;
-            arr.splice(arr.indexOf(value),1);
-            diceTotal -= value;
-            changeDiceValue();
-            winLose();  
-            console.log(total);
-            console.log(arr);
-            console.log(diceTotal);
-        }
-    });
-
-    box8.addEventListener('click',()=>{
-        let value = 8;
-        if (arr.includes(value)===true) {   
-            box8.style.backgroundColor = '#ff2718b0';
-            total -= value;
-            arr.splice(arr.indexOf(value),1);
-            diceTotal -= value;
-            changeDiceValue();
-            winLose();
-            console.log(arr);   
-            console.log(total);
-            console.log(diceTotal);
-        }
-    });
-
-    box9.addEventListener('click',()=>{
-        let value = 9;
-        if (arr.includes(value)===true) {   
-            box9.style.backgroundColor = '#ff2718b0';
-            total -= value;
-            arr.splice(arr.indexOf(value),1);
-            diceTotal -= value;
-            changeDiceValue();
-            winLose();
-            console.log(total);
-            console.log(arr); 
-            console.log(diceTotal);
-        }
-    });
+   
 }
+
 rollDice.addEventListener('click',()=>{
+    rollAnimation();
     if(diceTotal==0)
     {
         if(arr.length == 2)
